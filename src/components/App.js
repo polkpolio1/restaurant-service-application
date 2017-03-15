@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react'
 import VisibleDishList from './catalog/VisibleDishList'
 
-const App = ({ children }) => {
+const App = (props) => {
   return (
 	<div className="centered">
 	  <header>Header</header>
-	  {children}
+	  {props.children}
 	  <footer>Footer</footer>
 	</div>
   )

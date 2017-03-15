@@ -1,18 +1,18 @@
 {
-  "name": "redux-todomvc-example",
-  "version": "0.0.0",
-  "description": "Redux TodoMVC example",
+  "name": "Restaurant service application",
+  "version": "0.1.0",
+  "description": "Redux test work",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/redux.git"
+    "url": "https://github.com/polkpolio1"
   },
   "license": "",
   "bugs": {
-    "url": "https://github.com/reactjs/redux/issues"
+    "url": "https://github.com/polkpolio1/restaurant-service-application/issues"
   },
   "homepage": "http://redux.js.org",
   "dependencies": {

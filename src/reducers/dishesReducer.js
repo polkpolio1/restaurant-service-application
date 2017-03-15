@@ -15,25 +15,25 @@ for (let i = 0; i < DISHES_SIZE; i++) {
 }
 
 export default function reducer(state={
-    dishes: initialDishes,
+    arr: initialDishes,
     fetching: false,
     fetched: false,
     error: null,
   }, action) {
 
   switch (action.type) {
-    // case "FETCH_BOOKS": {
+    // case "FETCH_DISHES": {
     //   return {...state, fetching: true}
     // }
-    // case "FETCH_BOOKS_REJECTED": {
+    // case "FETCH_DISHES_REJECTED": {
     //   return {...state, fetching: false, error: action.payload}
     // }
-    // case "FETCH_BOOKS_FULFILLED": {
+    // case "FETCH_DISHES_FULFILLED": {
     //   return {
     //     ...state,
     //     fetching: false,
     //     fetched: true,
-    //     books: action.payload,
+    //     arr: action.payload,
     //   }
     // }
   }

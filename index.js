@@ -20,7 +20,7 @@ render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={VisibleDishList}></IndexRoute>
-    	<Route path="/dishes/(:dishId)" component={VisibleDishList}></Route>
+    	<Route path="/dishes(/:dishId)" component={VisibleDishList}></Route>
       </Route>
   	</Router>
   </Provider>,
