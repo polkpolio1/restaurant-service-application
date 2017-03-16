@@ -1,1 +1,1 @@
-export const SET_FILTER = 'SET_FILTER'
+export const SET_DISHES_SORT = 'SET_DISHES_SORT'

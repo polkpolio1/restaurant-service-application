@@ -5,11 +5,13 @@ for (let i = 0; i < DISHES_SIZE; i++) {
   let obj = i % 2 ? {
     name: 'Pizza ' + i,
     id: i,
-    type: 'pizzas'
+    type: 'pizzas',
+    price: Math.floor(Math.random() * 10000) + 100  
   } : {
     name: 'Drink ' + i,
     id: i,
-    type: 'drinks'
+    type: 'drinks',
+    price: Math.floor(Math.random() * 10000) + 100  
   }
   initialDishes.push(obj);
 }

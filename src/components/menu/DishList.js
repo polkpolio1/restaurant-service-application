@@ -1,23 +1,26 @@
 import React, { PropTypes } from 'react'
-import Dish from './Dish'
+import DishListItem from './DishListItem'
 
 const DishList = ({ dishes }) => (
   <ul>
   	{dishes.map(dish => 
-  	  <Dish 
+  	  <DishListItem 
   	  	key={dish.id}
+  	  	id={dish.id}
   	    name={dish.name}
   	    type={dish.type}
+        price={dish.price}
   	  />
   	)}
   </ul>
 )
 
-DishList.PropTypes = {
+DishList.propTypes = {
   dishes: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired
   }).isRequired).isRequired
 }
 
