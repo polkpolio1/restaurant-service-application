@@ -1,14 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import MenuList from '../components/menu/MenuList'
+
+import { fetchCategories, fetchDishes, fetchDish } from '../actions/menuActions'
+
+import CategoriesList from '../components/menu/CategoriesList'
 import DishList from '../components/menu/DishList'
 import SingleDish from '../components/menu/SingleDish'
 import NotFound from '../components/errors/NotFound'
 
-let MenuContainer = ({ state, params }) => {
+let MenuContainer = ({ state, params, dispatch }) => {
 
   const { dishId, dishType } = params
+
+  dispatch(fetchDish(dishId))
 
   if(dishId){
 
@@ -25,7 +30,7 @@ let MenuContainer = ({ state, params }) => {
     const types = state.reduce((types, obj) => {
       return !types.includes(obj.type) ? types.concat(obj.type) : types;
     }, [])
-    return <MenuList types={types} />
+    return <CategoriesList types={types} />
 
   }
 }

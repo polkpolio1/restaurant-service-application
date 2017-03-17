@@ -1,6 +1,6 @@
 let initialDishes = [];
 
-const DISHES_SIZE = 20;
+const DISHES_SIZE = 40;
 for (let i = 0; i < DISHES_SIZE; i++) {
   let obj = i % 2 ? {
     name: 'Pizza ' + i,

@@ -1,14 +1,17 @@
-var webpack = require('webpack')
-var webpackDevMiddleware = require('webpack-dev-middleware')
-var webpackHotMiddleware = require('webpack-hot-middleware')
-var config = require('./webpack.config')
+const webpack = require('webpack')
+const webpackDevMiddleware = require('webpack-dev-middleware')
+const webpackHotMiddleware = require('webpack-hot-middleware')
+const config = require('./webpack.config')
+const api = require('./src/server/api')
 
-var app = new (require('express'))()
-var port = 3000
+let app = new (require('express'))()
+let port = process.env.port || 3000
 
-var compiler = webpack(config)
+let compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
+
+api(app)
 
 app.get("/*", function(req, res) {
   res.sendFile(__dirname + '/index.html')

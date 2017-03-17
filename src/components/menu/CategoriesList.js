@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
-import MenuListItem from './MenuListItem'
+import CategoriesListItem from './CategoriesListItem'
 
-const MenuList = ({ types }) => (
+const CategoriesList = ({ types }) => (
   <ul>
   	{types.map((type, index) => 
-  	  <MenuListItem 
+  	  <CategoriesListItem 
   	  	key={index}
   	    type={type}
   	  />
@@ -12,10 +12,10 @@ const MenuList = ({ types }) => (
   </ul>
 )
 
-MenuList.propTypes = {
+CategoriesList.propTypes = {
   types: PropTypes.arrayOf(
     PropTypes.string.isRequired
   ).isRequired
 }
 
-export default MenuList
+export default CategoriesList

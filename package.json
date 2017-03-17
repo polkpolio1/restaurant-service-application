@@ -16,6 +16,7 @@
   },
   "homepage": "http://redux.js.org",
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-polyfill": "^6.3.14",
     "classnames": "^2.1.2",
     "pure-render-mixin": "^1.0.2",
@@ -24,6 +25,9 @@
     "react-redux": "^4.4.4",
     "react-router": "^3.0.2",
     "redux": "^3.3.1",
+    "redux-logger": "^2.8.2",
+    "redux-promise-middleware": "^4.2.0",
+    "redux-thunk": "^2.2.0",
     "reselect": "^2.3.0"
   },
   "devDependencies": {
