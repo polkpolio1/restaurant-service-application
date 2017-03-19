@@ -1,21 +1,22 @@
 import React, { PropTypes } from 'react'
 import CategoriesListItem from './CategoriesListItem'
 
-const CategoriesList = ({ types }) => (
+const CategoriesList = ({ categories }) => (
   <ul>
-  	{types.map((type, index) => 
+  	{categories.map( category => 
   	  <CategoriesListItem 
-  	  	key={index}
-  	    type={type}
+  	  	key={category.id}
+  	    name={category.name}
   	  />
   	)}
   </ul>
 )
 
 CategoriesList.propTypes = {
-  types: PropTypes.arrayOf(
-    PropTypes.string.isRequired
-  ).isRequired
+  categories: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
+  }).isRequired).isRequired
 }
 
 export default CategoriesList

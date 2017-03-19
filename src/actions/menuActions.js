@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import * as types from '../constants/ActionTypes'
+import * as types from '../constants/actionTypes'
 
 function requestCategories() {
   return {
@@ -27,7 +27,7 @@ export function fetchCategories() {
   	dispatch(requestCategories())
   	return axios.get("http://" + window.location.host + '/api/categories')
       .then((response) => {
-        dispatch(receiveCategories(response))
+        dispatch(receiveCategories(response.data))
       })
       .catch((err) => {
         dispatch(failureCategories(err))
@@ -61,7 +61,7 @@ export function fetchDishes(category) {
   	dispatch(requestDishes(category))
   	return axios.get("http://" + window.location.host + '/api/categories/' + category)
       .then((response) => {
-        dispatch(receiveDishes(response))
+        dispatch(receiveDishes(response.data))
       })
       .catch((err) => {
         dispatch(failureDishes(err))
@@ -95,7 +95,7 @@ export function fetchDish(id) {
   	dispatch(requestDish(id))
   	return axios.get("http://" + window.location.host + '/api/dishes/' + id)
       .then((response) => {
-        dispatch(receiveDish(response))
+        dispatch(receiveDish(response.data))
       })
       .catch((err) => {
         dispatch(failureDish(err))

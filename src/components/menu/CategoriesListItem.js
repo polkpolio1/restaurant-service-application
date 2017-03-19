@@ -1,15 +1,15 @@
 import React, { PropTypes } from 'react'
 import { Link } from "react-router"
 
-const CategoryiesListItem = ({ type }) => (
+const CategoryiesListItem = ({ name }) => (
   <li>
-    <p><b>Type:</b></p>
-    <Link activeClassName="active" to={ "/menu/"+ type }>{ type }</Link>
+    <p><b>Category:</b></p>
+    <Link activeClassName="active" to={ "/menu/"+ name }>{ name }</Link>
   </li>
 )
 
 CategoryiesListItem.propTypes = {
-  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 }
 
 export default CategoryiesListItem

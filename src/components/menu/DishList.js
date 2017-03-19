@@ -8,7 +8,7 @@ const DishList = ({ dishes }) => (
   	  	key={dish.id}
   	  	id={dish.id}
   	    name={dish.name}
-  	    type={dish.type}
+  	    category={dish.category}
         price={dish.price}
   	  />
   	)}
@@ -19,7 +19,7 @@ DishList.propTypes = {
   dishes: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired
   }).isRequired).isRequired
 }

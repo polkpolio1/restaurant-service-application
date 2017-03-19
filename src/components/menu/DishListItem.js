@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 import { Link } from "react-router"
 
-const DishListItem = ({ name, type, id, price }) => (
+const DishListItem = ({ name, category, id, price }) => (
   <li>
-    <Link activeClassName="active" to={ "/menu/" + type + "/" + id }>{ name }</Link>
-    <p><b>Type: </b>{type}</p>
+    <Link activeClassName="active" to={ "/dishes/" + id }>{ name }</Link>
+    <p><b>category: </b>{category}</p>
     <p><b>Price: </b>{price}</p>
   </li>
 )
@@ -12,7 +12,7 @@ const DishListItem = ({ name, type, id, price }) => (
 DishListItem.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired
 }
 
