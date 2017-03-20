@@ -2,11 +2,16 @@ import React, { PropTypes } from 'react'
 import { Link } from "react-router"
 
 const DishListItem = ({ dish }) => (
-  <li>
-    <Link activeClassName="active" to={ "/dishes/" + dish.id }>{ dish.name }</Link>
-    <p><b>category: </b>{dish.category}</p>
-    <p><b>Price: </b>{dish.price}</p>
-  </li>
+  <div className="col-sm-4">
+    <div className="card">
+      <div className="card-block">
+        <h3 class="card-title">{ dish.name }</h3>
+        <p className="card-text"><b>category: </b>{dish.category}</p>
+        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <Link className="btn btn-primary" to={ "/dishes/"+ dish.id }>Go to</Link>
+    </div>
+  </div>
+  </div>
 )
 
 DishListItem.propTypes = {

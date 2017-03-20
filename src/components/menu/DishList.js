@@ -2,14 +2,14 @@ import React, { PropTypes } from 'react'
 import DishListItem from './DishListItem'
 
 const DishList = ({ dishes }) => (
-  <ul>
+  <div className="row">
   	{dishes.map(dish => 
   	  <DishListItem 
         key={dish.id}
   	  	dish={dish}
   	  />
   	)}
-  </ul>
+  </div>
 )
 
 DishList.propTypes = {

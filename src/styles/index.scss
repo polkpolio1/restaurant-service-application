@@ -7,3 +7,10 @@ body {
 .none{
 	display: block;
 }
+
+.border-bottom-1{
+	border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.border-top-1{
+	border-top: 1px solid rgba(0,0,0,.125);
+}

@@ -2,8 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div> 
-       <hr/>
+    <div className="py-3 border-top-1">
        <p>© copy</p>
     </div>
   )

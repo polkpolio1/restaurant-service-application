@@ -3,17 +3,10 @@ import { IndexLink, Link } from "react-router"
 
 const Header = () => {
   return (
-    <div> 
-       <ul>
-        <li>
-          <IndexLink activeClassName="active" to="/">Home</IndexLink>
-        </li>
-        <li>
-          <Link activeClassName="active" to="/menu">Menu</Link>
-        </li>
-      </ul>
-      <hr/>
-    </div>
+    <nav className="nav nav-pills flex-column flex-sm-row py-3 border-bottom-1">
+      <IndexLink className="flex-sm-fill text-sm-center nav-link" activeClassName="active" to="/">Home</IndexLink>
+      <Link className="flex-sm-fill text-sm-center nav-link" activeClassName="active" to="/menu">Menu</Link>
+    </nav>
   )
 }
 
