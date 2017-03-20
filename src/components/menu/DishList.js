@@ -5,11 +5,8 @@ const DishList = ({ dishes }) => (
   <ul>
   	{dishes.map(dish => 
   	  <DishListItem 
-  	  	key={dish.id}
-  	  	id={dish.id}
-  	    name={dish.name}
-  	    category={dish.category}
-        price={dish.price}
+        key={dish.id}
+  	  	dish={dish}
   	  />
   	)}
   </ul>

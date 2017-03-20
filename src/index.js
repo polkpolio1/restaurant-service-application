@@ -9,6 +9,7 @@ import MenuContainer from './containers/MenuContainer'
 import DishContainer from './containers/DishContainer'
 import HomeContainer from './containers/HomeContainer'
 import configureStore from './store/configureStore'
+import NotFound from './components/errors/NotFound'
 import './styles/index.scss'
 
 if (module.hot) {
@@ -24,6 +25,8 @@ render(
         <IndexRoute component={HomeContainer}></IndexRoute>
         <Route path="/menu(/:category)" component={MenuContainer}></Route>
         <Route path="/dishes/:dishId" component={DishContainer}></Route>
+
+        <Route path="*" component={NotFound} />
       </Route>
   	</Router>
   </Provider>,

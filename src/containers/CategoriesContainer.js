@@ -9,14 +9,15 @@ import CategoriesList from '../components/menu/CategoriesList'
 class CategoriesContainer extends React.Component {
 
   componentWillMount() {
+
     this.props.dispatch(fetchCategories())
   }
 
   render() {
     const { categories, fetched } = this.props.state;
-    if(!fetched){
-      return <h1>loading</h1>
-    }
+    // if(!fetched){
+    //   return <h1>loading</h1>
+    // }
     return <CategoriesList categories={categories}/>
   }
 }

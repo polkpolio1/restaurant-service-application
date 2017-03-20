@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import * as types from '../constants/actionTypes'
+import { startLoading, endLoading } from './preloaderActions';
 
 function requestCategories() {
   return {
@@ -24,10 +25,14 @@ function failureCategories(err){
 
 export function fetchCategories() {
   return dispatch => {
+    dispatch(startLoading())
   	dispatch(requestCategories())
   	return axios.get("http://" + window.location.host + '/api/categories')
       .then((response) => {
         dispatch(receiveCategories(response.data))
+        setTimeout(()=>{
+          dispatch(endLoading())
+        }, 200)
       })
       .catch((err) => {
         dispatch(failureCategories(err))
@@ -58,10 +63,14 @@ function failureDishes(err){
 
 export function fetchDishes(category) {
   return (dispatch) => {
+    dispatch(startLoading())
   	dispatch(requestDishes(category))
   	return axios.get("http://" + window.location.host + '/api/categories/' + category)
       .then((response) => {
         dispatch(receiveDishes(response.data))
+        setTimeout(()=>{
+          dispatch(endLoading())
+        }, 200)
       })
       .catch((err) => {
         dispatch(failureDishes(err))
@@ -92,10 +101,14 @@ function failureDish(err){
 
 export function fetchDish(id) {
   return (dispatch) => {
+    dispatch(startLoading())
   	dispatch(requestDish(id))
   	return axios.get("http://" + window.location.host + '/api/dishes/' + id)
       .then((response) => {
         dispatch(receiveDish(response.data))
+        setTimeout(()=>{
+          dispatch(endLoading())
+        }, 200)
       })
       .catch((err) => {
         dispatch(failureDish(err))

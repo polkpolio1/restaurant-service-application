@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { fetchDishes } from '../actions/menuActions'
 
 import DishList from '../components/menu/DishList'
-// import NotFound from '../components/errors/NotFound'
+import NotFound from '../components/errors/NotFound'
 
 class CategoryContainer extends React.Component {
 
@@ -13,10 +13,12 @@ class CategoryContainer extends React.Component {
   }
 
   render() {
-    const { dishes, fetched } = this.props.state;
-    if(!fetched){
-      return <h1>loading</h1>
-    }
+    const { dishes, error } = this.props.state;
+
+    if(error)
+      if(error.response.status)
+        return <NotFound />
+    
     return <DishList dishes={dishes}/>
   }
 }

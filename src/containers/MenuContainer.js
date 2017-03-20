@@ -8,7 +8,6 @@ class MenuContainer extends React.Component {
 
   render() {
     const { category } = this.props.params;
-    console.log(category)
     return category ? <CategoryContainer category={category}/> : <CategoriesContainer />
   }
 }

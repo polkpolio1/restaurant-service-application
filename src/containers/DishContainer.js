@@ -16,7 +16,6 @@ class DishContainer extends React.Component {
 
   render() {
     const { dish, fetched } = this.props.state;
-
     if(!fetched){
       return <h1>loading</h1>
     }

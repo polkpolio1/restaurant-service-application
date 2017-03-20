@@ -1,11 +1,12 @@
 import { combineReducers } from "redux"
 
-// import dishes from "./dishesReducer"
+import preloader from "./preloader"
 import categories from "./categories"
 import dishes from "./dishes"
 import dish from "./dish"
 
 export default combineReducers({
+  preloader,
   categories,
   dishes,
   dish

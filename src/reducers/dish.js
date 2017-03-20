@@ -24,6 +24,7 @@ export default function reducer(state={
         ...state,
         fetching: false,
         fetched: true,
+        error: null,
         dish: action.payload,
       }
   }
