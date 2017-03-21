@@ -14,11 +14,7 @@ module.exports = function(app){
       if(err) throw err
       let dishes = JSON.parse( data )
       dishes = dishes.filter((dish) => dish.category == req.params.category )
-      if(!dishes.length)
-        res.status(404).send('Not found')
-      else{
-        res.end( JSON.stringify(dishes) )
-      } 
+      res.end( JSON.stringify(dishes) )
     })
   })
 

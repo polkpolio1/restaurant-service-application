@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import classnames from 'classnames'
+
 import {startLoading, endLoading} from '../actions/preloaderActions';
 
 import Preloader from '../components/layout/Preloader'

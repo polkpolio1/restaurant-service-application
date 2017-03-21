@@ -1,20 +1,277 @@
 [
   {
   	"id": 1,
-  	"name": "Pizza 1",
+  	"name": "Pizza Margarita",
+    "components" : "Pizza sauce, Mozzarella cheese, tomatoes, tincture of tenderness.",
   	"category": "pizzas",
-  	"price": 2000
+    "url": "/img/pizzas/pitctca-margarita1.jpg",
+  	"params": [
+      {
+        "price": 69,
+        "weight": 525,
+        "diametr": 30
+      },
+      {
+        "price": 95,
+        "weight": 865,
+        "diametr": 40
+      }
+    ]
   },
   {
   	"id": 2,
-  	"name": "Pizza 2",
+  	"name": "Pizza Margarita Chile",
+    "components" : "Sauce Barbecue, Mozzarella cheese, hot pepper, strong spirit.",
   	"category": "pizzas",
-  	"price": 1500
+    "url": "/img/pizzas/pitctca-margarita-chili.jpg",
+  	"params": [
+      {
+        "price": 69,
+        "weight": 505,
+        "diametr": 30
+      },
+      {
+        "price": 95,
+        "weight": 825,
+        "diametr": 40
+      }
+    ]
   },
   {
-  	"id": 3,
-  	"name": "Drink 1",
-  	"category": "drinks",
-  	"price": 2000
+    "id": 3,
+    "name": "Pizza Hawaiian",
+    "components" : "Pizza sauce, Mozzarella cheese, ham, pineapple, excellent mood.",
+    "category": "pizzas",
+    "url": "/img/pizzas/pitctca-gavayskaya.jpg",
+    "params": [
+      {
+        "price": 95,
+        "weight": 575,
+        "diametr": 30
+      },
+      {
+        "price": 149,
+        "weight": 945,
+        "diametr": 40
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pizza Vega",
+    "components" : "Pizza sauce, Tofu cheese, champignons, tomatoes, green beans, soy sauce, love and care.",
+    "category": "pizzas",
+    "url": "/img/pizzas/pitctca-vega.jpg",
+    "params": [
+      {
+        "price": 95,
+        "weight": 665,
+        "diametr": 30
+      },
+      {
+        "price": 149,
+        "weight": 1115,
+        "diametr": 40
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pizza Nicosia",
+    "components" : "Pizza sauce, Mozzarella cheese, ham, tomatoes, a drop of witchcraft.",
+    "category": "pizzas",
+    "url": "/img/pizzas/pitctca-nikosiya.jpg",
+    "params": [
+      {
+        "price": 99,
+        "weight": 605,
+        "diametr": 40
+      },
+      {
+        "price": 155,
+        "weight": 985,
+        "diametr": 40
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Pizza Picente",
+    "components" : "Mustard sauce, Mozzarella cheese, bacon, pickled cucumbers, hot pepper, joy enhancer.",
+    "category": "pizzas",
+    "url": "/img/pizzas/pitctca-pikante.jpg",
+    "params": [
+      {
+        "price": 99,
+        "weight": 610,
+        "diametr": 40
+      },
+      {
+        "price": 155,
+        "weight": 1000,
+        "diametr": 40
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Pizza Jamaica",
+    "components" : "Pizza sauce, Mozzarella cheese, chicken breast, pineapple, hot pepper, greens, a decoction of love.",
+    "category": "pizzas",
+    "url": "/img/pizzas/pitctca-yamayka.jpg",
+    "params": [
+      {
+        "price": 102,
+        "weight": 1005,
+        "diametr": 40
+      },
+      {
+        "price": 159,
+        "weight": 615,
+        "diametr": 40
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Aqua Minerale carbonated",
+    "components" : "Aqua Minerale carbonated.",
+    "category": "drinks",
+    "url": "/img/drinks/akva-minerale-gazirovannaya.jpg",
+    "params": [
+      {
+        "price": 15,
+        "weight": 0.6
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Aqua Minerale still",
+    "components" : "Aqua Minerale still.",
+    "category": "drinks",
+    "url": "/img/drinks/akva-minerale-negazirovannaya.jpg",
+    "params": [
+      {
+        "price": 15,
+        "weight": 0.6
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Mirinda",
+    "components" : "Mirinda.",
+    "category": "drinks",
+    "url": "/img/drinks/mirinda.jpg",
+    "params": [
+      {
+        "price": 20,
+        "weight": 0.5
+      },
+      {
+        "price": 25,
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Pepsi",
+    "components" : "Pepsi.",
+    "category": "drinks",
+    "url": "/img/drinks/coca-cola.jpg",
+    "params": [
+      {
+        "price": 20,
+        "weight": 0.5
+      },
+      {
+        "price": 25,
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "7-UP",
+    "components" : "7-UP.",
+    "category": "drinks",
+    "url": "/img/drinks/7-up.jpg",
+    "params": [
+      {
+        "price": 20,
+        "weight": 0.5
+      },
+      {
+        "price": 25,
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Sandora Juices",
+    "components" : "In the assortment (orange / cherry / grapes / multifruit / tomato / apple).",
+    "category": "drinks",
+    "url": "/img/drinks/soki-sandora.jpg",
+    "params": [
+      {
+        "price": 30,
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Sandwich Ramses",
+    "components" : "Toast bread, Iceberg salad, tomatoes, cucumber, chicken breast, Caesar sauce, love elixir.",
+    "category": "sandwiches",
+    "url": "/img/sandwiches/sendvich-ramzes.jpg",
+    "params": [
+      {
+        "price": 30,
+        "weight": 145
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Sandwich Firm",
+    "components" : "Toast bread, Iceberg salad, tomatoes, egg, Caesar sauce, real joy.",
+    "category": "sandwiches",
+    "url": "/img/sandwiches/sendvich-firmennyy.jpg",
+    "params": [
+      {
+        "price": 35,
+        "weight": 160
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sandwich with chicken",
+    "components" : "Toast bread, Iceberg salad, cucumber, chicken breast, mayonnaise, tenderness and care.",
+    "category": "sandwiches",
+    "url": "/img/sandwiches/sendvich-s-kuritcey.jpg",
+    "params": [
+      {
+        "price": 37,
+        "weight": 140
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Japanese Sandwich",
+    "components" : "Salmon, avocado, Japanese rice, nori, sesame, cream cheese, Unagi sauce, tempura, an ordinary miracle.",
+    "category": "sandwiches",
+    "url": "/img/sandwiches/yaponskiy-sendvich.jpg",
+    "params": [
+      {
+        "price": 89,
+        "weight": 190
+      }
+    ]
   }
 ]

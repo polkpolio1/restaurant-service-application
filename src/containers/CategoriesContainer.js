@@ -14,10 +14,7 @@ class CategoriesContainer extends React.Component {
   }
 
   render() {
-    const { categories, fetched } = this.props.state;
-    // if(!fetched){
-    //   return <h1>loading</h1>
-    // }
+    const { categories } = this.props.state;
     return <CategoriesList categories={categories}/>
   }
 }

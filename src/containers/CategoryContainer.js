@@ -14,11 +14,6 @@ class CategoryContainer extends React.Component {
 
   render() {
     const { dishes, error } = this.props.state;
-
-    if(error)
-      if(error.response.status)
-        return <NotFound />
-    
     return <DishList dishes={dishes}/>
   }
 }

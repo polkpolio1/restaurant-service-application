@@ -16,8 +16,10 @@ DishList.propTypes = {
   dishes: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    components: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired
+    url: PropTypes.string.isRequired,
+    params: PropTypes.array.isRequired
   }).isRequired).isRequired
 }
 

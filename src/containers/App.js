@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
 
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
@@ -13,7 +12,6 @@ const App = (props) => (
     <Footer/>
   </div>
 )
-
 
 export default App
 

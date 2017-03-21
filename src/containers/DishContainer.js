@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 
 import { fetchDish } from '../actions/menuActions'
 
-import SingleDish from '../components/menu/SingleDish'
-// import NotFound from '../components/errors/NotFound'
+import Dish from '../components/dish/Dish'
 
 
 class DishContainer extends React.Component {
@@ -15,11 +14,13 @@ class DishContainer extends React.Component {
   }
 
   render() {
-    const { dish, fetched } = this.props.state;
-    if(!fetched){
-      return <h1>loading</h1>
-    }
-    return <SingleDish dish={dish}/>
+    const { dish } = this.props.state;
+
+    if(!dish)
+      return null
+
+    return <Dish dish={dish} />
+
   }
 }
 

@@ -1,7 +1,7 @@
 import * as types from '../constants/actionTypes'
 
 export default function reducer(state={
-    dish: {},
+    dish: null,
     fetching: false,
     fetched: false,
     error: null,
