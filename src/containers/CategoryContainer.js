@@ -8,22 +8,23 @@ import NotFound from '../components/errors/NotFound'
 
 class CategoryContainer extends React.Component {
 
-  componentWillMount() {
-    this.props.dispatch(fetchDishes(this.props.category))
+  componentDidMount() {
+    const { category } = this.props;
+    this.props.dispatch(fetchDishes(category))
   }
 
   render() {
-    const { dishes, error } = this.props.state;
+    const dishes = this.props.dishes
     return <DishList dishes={dishes}/>
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    state: state.dishes
+    dishes: state.dishes.dishes
   }
 }
 
-CategoryContainer = connect(mapStateToProps)(CategoryContainer)
-
-export default CategoryContainer
+export default connect(
+  mapStateToProps
+)(CategoryContainer)

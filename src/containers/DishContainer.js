@@ -2,34 +2,43 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { fetchDish } from '../actions/menuActions'
+import { addToCart } from '../actions/cartActions'
 
 import Dish from '../components/dish/Dish'
 
 
 class DishContainer extends React.Component {
 
-  componentWillMount() {
-    const { dishId } = this.props.params;
+  componentDidMount() {
+    const { dishId } = this.props.params
     this.props.dispatch(fetchDish(dishId))
   }
 
-  render() {
-    const { dish } = this.props.state;
+  addToCartHandle(dish, details) {
+    this.props.dispatch(addToCart(dish, details))
+  }
 
-    if(!dish)
+  render() {
+
+    const { dishId } = this.props.params
+    const dish = this.props.dish
+
+    if(!dish || dishId != dish.id )
       return null
 
-    return <Dish dish={dish} />
+    return (
+      <Dish dish={dish} addToCartHandle={this.addToCartHandle.bind(this, dish)}/>
+    )
 
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    state: state.dish
+    dish: state.dish.dish
   }
 }
 
-DishContainer = connect(mapStateToProps)(DishContainer)
-
-export default DishContainer
+export default connect(
+  mapStateToProps
+)(DishContainer)

@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Preloader = () => {
-	return <div> 
-  	loading
+const Preloader = () => (
+  <div> 
+  	Loading...
   </div>
-}
-  
+)
 
 export default Preloader

@@ -3,6 +3,7 @@ import axios from "axios";
 import * as types from '../constants/actionTypes'
 import { startLoading, endLoading } from './preloaderActions';
 
+
 function requestCategories() {
   return {
     type: types.FETCH_CATEGORIES_REQUEST

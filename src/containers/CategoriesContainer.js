@@ -4,27 +4,26 @@ import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/menuActions'
 
 import CategoriesList from '../components/menu/CategoriesList'
-// import NotFound from '../components/errors/NotFound'
 
 class CategoriesContainer extends React.Component {
 
-  componentWillMount() {
-
-    this.props.dispatch(fetchCategories())
+  componentDidMount() {
+    if( !this.props.categories.length )
+      this.props.dispatch(fetchCategories())
   }
 
   render() {
-    const { categories } = this.props.state;
+    const categories = this.props.categories;
     return <CategoriesList categories={categories}/>
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    state: state.categories
+    categories: state.categories.categories
   }
 }
 
-CategoriesContainer = connect(mapStateToProps)(CategoriesContainer)
-
-export default CategoriesContainer
+export default connect(
+  mapStateToProps
+)(CategoriesContainer)

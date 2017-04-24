@@ -5,13 +5,13 @@ import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import PreloaderContainer from './PreloaderContainer'
 
-const App = (props) => (
-  <div className="container">
-    <Header/>
-    <PreloaderContainer {...props}/>
-    <Footer/>
-  </div>
-)
-
-export default App
+export default class App extends React.Component {	
+  render() {
+  	return <div className="container">
+      <Header/>
+      <PreloaderContainer {...this.props}/>
+      <Footer/>
+	</div>
+  }
+}
 

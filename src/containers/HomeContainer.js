@@ -3,7 +3,8 @@ import React from 'react'
 const HomePage = () => {
   return (
     <div> 
-       Home Page
+       <p>Software implementation of the restaurant business cycle.</p>
+       <p>Customer, waiter, cook, administrator roles.</p>
     </div>
   )
 }
